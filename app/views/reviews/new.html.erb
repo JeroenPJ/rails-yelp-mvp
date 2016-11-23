@@ -1,0 +1,5 @@
+<%= link_to "< Back to restaurant page", restaurant_path(@restaurant), { class: "link-style-none btn-main" } %>
+
+<h2>Create a new review for <%= @restaurant.name %>:</h2>
+
+<%= render 'new_review_form' %>

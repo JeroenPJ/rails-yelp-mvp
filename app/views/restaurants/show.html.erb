@@ -1,0 +1,42 @@
+<%= link_to "< Back to home", restaurants_path, { class: "btn-main link-style-none" } %>
+
+<div class='restaurant-card-lg'>
+  <h3><%= @restaurant.name %></h3>
+  <h5>Category: <%= @restaurant.category.capitalize %></h5>
+  <h5>Rating:
+    <% @restaurant.average[:grade].to_i.times do %>
+      <i class="fa fa-star color-yellow" aria-hidden="true"></i>
+    <% end %>
+    <% (5 - @restaurant.average[:grade].to_i).times do %>
+      <i class="fa fa-star-o" aria-hidden="true"></i>
+    <% end %>
+  </h5>
+  <hr>
+  <p>Address: <%= @restaurant.address %></p>
+  <p>Phone number: <%= @restaurant.phone_number %></p>
+</div>
+
+<div class='reviews-container'>
+  <h3>User reviews:</h3>
+  <ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li>
+      <div class='review-card'>
+        <p>
+          <% review.rating.times do %>
+            <i class="fa fa-star color-yellow" aria-hidden="true"></i>
+          <% end %>
+          <% (5 - review.rating).times do %>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+          <% end %>
+        </p>
+        <p><%= review.content %></p>
+      </div>
+    </li>
+  <% end %>
+    <li>
+      <%= link_to new_restaurant_review_path(@restaurant), { class: "link-style-none" } do %>
+        <div class='review-card review-card-btn text-center'>Add a review</div>
+      <% end %>
+  </ul>
+</div>

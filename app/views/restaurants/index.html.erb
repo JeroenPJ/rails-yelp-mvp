@@ -1,0 +1,23 @@
+<h2>Featured restaurants:</h2>
+
+<ul>
+  <% i = 0 %>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= link_to restaurant_path(restaurant), { class: "link-style-none" } do %>
+        <div class="restaurant-card">
+          <h3><%= i + 1 %>. <span class='header-large'><%= restaurant.name %></span></h3>
+          <p><%= restaurant.category.capitalize %> food</p>
+          <p><%= restaurant.average[:message] %></p>
+        </div>
+      <% end %>
+    </li>
+  <% i += 1 %>
+  <% end %>
+
+  <li>
+    <%= link_to new_restaurant_path, { class: "link-style-none" } do %>
+      <div class="restaurant-card-btn text-center">Add a restaurant</div>
+    <% end %>
+  </li>
+</ul>

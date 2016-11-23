@@ -1,0 +1,7 @@
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name, label: "Name", placeholder: 'The Fat Duck' %>
+  <%= f.input :address, label: "Address" %>
+  <%= f.input :phone_number, label: "Phone number", placeholder: '+000 1234 5678' %>
+  <%= f.input :category, as: :select, collection: Restaurant::CATEGORIES, value: 'select a category' %>
+  <%= f.button :submit, class: "btn-main" %>
+<% end %>

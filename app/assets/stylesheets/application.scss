@@ -1,0 +1,56 @@
+// Graphical variables
+@import "config/variables";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS
+@import "layout/index";
+@import "components/index";
+@import "components/buttons";
+@import "components/restaurant_cards";
+@import "components/review_cards";
+@import "pages/index";
+@import "vendor/index";
+
+body {
+  background: #ffffff url("bg.png") repeat right top;
+  background-size: 5%;
+  padding-top: 70px;
+}
+
+ul {
+  list-style: none;
+}
+
+.link-style-none {
+  text-decoration: none !important;
+}
+
+.link-style-none:hover {
+  text-decoration: none !important;
+}
+
+.color-yellow {
+  color: #e8c100;
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  padding: 40px 0 80px 0;
+}
+
+.container#container-home {
+  margin-top: 100%;
+}
+
+h3 {
+  font-size: 30px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}

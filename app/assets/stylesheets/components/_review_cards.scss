@@ -1,0 +1,17 @@
+.review-card {
+  border-bottom: 1px solid #ccc;
+  padding: 30px;
+}
+
+.review-card-btn {
+  background-color: #a90329;
+  color: #fff;
+  padding: 20px;
+
+  transition: background-color 0.3s;
+}
+
+.review-card-btn:hover {
+  text-decoration: none;
+  background-color: #6d0019;
+}

@@ -1,0 +1,71 @@
+.restaurant-card {
+  padding: 20px;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.restaurant-card:hover {
+  padding-left: 32px;
+  border-bottom: 4px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.restaurant-card h3 {
+  font-size: 25px;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+}
+
+.restaurant-card .header-large {
+  font-size: 30px;
+  color: #333;
+}
+
+.restaurant-card:hover h3, .restaurant-card:hover .header-large {
+  color: #a90329;
+}
+
+.restaurant-card p {
+  font-size: 15px;
+  color: #777;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+}
+
+
+/* LARGE CARD */
+.restaurant-card-lg {
+  padding: 40px;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.restaurant-card-lg h3 {
+  font-size: 30px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.restaurant-card h5 {
+  font-size: 16px;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* BUTTON */
+.restaurant-card-btn {
+  background-color: #a90329;
+  color: #fff;
+  padding: 20px;
+
+  transition: background-color 0.3s;
+}
+
+.restaurant-card-btn:hover {
+  text-decoration: none;
+  background-color: #6d0019;
+}
